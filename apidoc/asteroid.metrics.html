@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>asteroid.metrics module &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroidapidoc/asteroid.metrics.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="../_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>asteroid.metrics module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/asteroid.metrics.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-asteroid.metrics">
+<span id="asteroid-metrics-module"></span><h1>asteroid.metrics module<a class="headerlink" href="#module-asteroid.metrics" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="asteroid.metrics.get_metrics">
+<code class="sig-prename descclassname">asteroid.metrics.</code><code class="sig-name descname">get_metrics</code><span class="sig-paren">(</span><em class="sig-param">mix</em>, <em class="sig-param">clean</em>, <em class="sig-param">estimate</em>, <em class="sig-param">sample_rate=16000</em>, <em class="sig-param">metrics_list='all'</em>, <em class="sig-param">average=True</em>, <em class="sig-param">compute_permutation=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/metrics.html#get_metrics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.metrics.get_metrics" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get speech separation/enhancement metrics from mix/clean/estimate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mix</strong> (<em>np.array</em>) – ‘Shape(D, N)’ or ‘Shape(N, )’.</p></li>
+<li><p><strong>clean</strong> (<em>np.array</em>) – ‘Shape(K_source, N)’ or ‘Shape(N, )’.</p></li>
+<li><p><strong>estimate</strong> (<em>np.array</em>) – ‘Shape(K_target, N)’ or ‘Shape(N, )’.</p></li>
+<li><p><strong>sample_rate</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – sampling rate of the audio clips.</p></li>
+<li><p><strong>metrics_list</strong> (<em>Union</em><em> [</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>]</em>) – List of metrics to compute.
+Defaults to ‘all’ ([‘si_sdr’, ‘sdr’, ‘sir’, ‘sar’, ‘stoi’, ‘pesq’]).</p></li>
+<li><p><strong>average</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – Return dict([float]) if True, else dict([array]).</p></li>
+<li><p><strong>compute_permutation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – Whether to compute the permutation on
+estimate sources for the output metrics (default False)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><em>dict</em> –</p>
+<dl class="simple">
+<dt>Dictionary with all requested metrics, with <cite>‘input_’</cite> prefix</dt><dd><p>for metrics at the input (mixture against clean), no prefix at the
+output (estimate against clean). Output format depends on average.</p>
+</dd>
+</dl>
+</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">pprint</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">asteroid.metrics</span> <span class="kn">import</span> <span class="n">get_metrics</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">16000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">clean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">16000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">est</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">16000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">metrics_dict</span> <span class="o">=</span> <span class="n">get_metrics</span><span class="p">(</span><span class="n">mix</span><span class="p">,</span> <span class="n">clean</span><span class="p">,</span> <span class="n">est</span><span class="p">,</span> <span class="n">sample_rate</span><span class="o">=</span><span class="mi">8000</span><span class="p">,</span>
+<span class="gp">&gt;&gt;&gt; </span>                           <span class="n">metrics_list</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">metrics_dict</span><span class="p">)</span>
+<span class="go">{&#39;input_pesq&#39;: 1.924380898475647,</span>
+<span class="go"> &#39;input_sar&#39;: -11.67667585294225,</span>
+<span class="go"> &#39;input_sdr&#39;: -14.88667106190552,</span>
+<span class="go"> &#39;input_si_sdr&#39;: -52.43849784881705,</span>
+<span class="go"> &#39;input_sir&#39;: -0.10419427290163795,</span>
+<span class="go"> &#39;input_stoi&#39;: 0.015112115177091223,</span>
+<span class="go"> &#39;pesq&#39;: 1.7713886499404907,</span>
+<span class="go"> &#39;sar&#39;: -11.610963379923195,</span>
+<span class="go"> &#39;sdr&#39;: -14.527246041125844,</span>
+<span class="go"> &#39;si_sdr&#39;: -46.26557128489802,</span>
+<span class="go"> &#39;sir&#39;: 0.4799929272243427,</span>
+<span class="go"> &#39;stoi&#39;: 0.022023073540350643}</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

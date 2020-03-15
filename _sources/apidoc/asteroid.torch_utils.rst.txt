@@ -1,0 +1,8 @@
+asteroid.torch\_utils module
+============================
+
+.. automodule:: asteroid.torch_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

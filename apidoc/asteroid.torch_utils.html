@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>asteroid.torch_utils module &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroidapidoc/asteroid.torch_utils.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="../_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>asteroid.torch_utils module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/asteroid.torch_utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-asteroid.torch_utils">
+<span id="asteroid-torch-utils-module"></span><h1>asteroid.torch_utils module<a class="headerlink" href="#module-asteroid.torch_utils" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="asteroid.torch_utils.are_models_equal">
+<code class="sig-prename descclassname">asteroid.torch_utils.</code><code class="sig-name descname">are_models_equal</code><span class="sig-paren">(</span><em class="sig-param">model1</em>, <em class="sig-param">model2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/torch_utils.html#are_models_equal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.torch_utils.are_models_equal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check for weights equality between models.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model1</strong> (<em>nn.Module</em>) – model instance to be compared.</p></li>
+<li><p><strong>model2</strong> (<em>nn.Module</em>) – second model instance to be compared.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>bool</em> – Whether all model weights are equal.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="asteroid.torch_utils.load_state_dict_in">
+<code class="sig-prename descclassname">asteroid.torch_utils.</code><code class="sig-name descname">load_state_dict_in</code><span class="sig-paren">(</span><em class="sig-param">state_dict</em>, <em class="sig-param">model</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/torch_utils.html#load_state_dict_in"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.torch_utils.load_state_dict_in" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Strictly loads state_dict in model, or the next submodel.</dt><dd><p>Useful to load standalone model after training it with System.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_dict</strong> (<em>OrderedDict</em>) – the state_dict to load.</p></li>
+<li><p><strong>model</strong> (<a class="reference external" href="https://pytorch.org/docs/master/nn.html#torch.nn.Module" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><em>torch.nn.Module</em></a>) – the model to load it into</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>torch.nn.Module</em> – model with loaded weights.</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt># Note :</dt><dd><p>Keys in a state_dict look like object1.object2.layer_name.weight.etc
+We first try to load the model in the classic way.
+If this fail we removes the first left part of the key to obtain
+object2.layer_name.weight.etc.
+Blindly loading with strictly=False should be done with some logging
+of the missing keys in the state_dict and the model.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="asteroid.torch_utils.pad_x_to_y">
+<code class="sig-prename descclassname">asteroid.torch_utils.</code><code class="sig-name descname">pad_x_to_y</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">y</em>, <em class="sig-param">axis=-1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/torch_utils.html#pad_x_to_y"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.torch_utils.pad_x_to_y" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pad first argument to have same size as second argument</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<a class="reference external" href="https://pytorch.org/docs/master/tensors.html#torch.Tensor" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><em>torch.Tensor</em></a>) – Tensor to be padded.</p></li>
+<li><p><strong>y</strong> (<a class="reference external" href="https://pytorch.org/docs/master/tensors.html#torch.Tensor" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><em>torch.Tensor</em></a>) – Tensor to pad x to.</p></li>
+<li><p><strong>axis</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – Axis to pad on.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>torch.Tensor, x padded to match y’s shape.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

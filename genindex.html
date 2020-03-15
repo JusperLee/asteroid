@@ -1,0 +1,982 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Index &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroidgenindex.html"/>
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Index</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#_"><strong>_</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#O"><strong>O</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ | <a href="#W"><strong>W</strong></a>
+ 
+</div>
+<h2 id="_">_</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.__enter__">__enter__() (asteroid.data.wav.SingleWav method)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.__exit__">__exit__() (asteroid.data.wav.SingleWav method)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.dns_dataset.html#asteroid.data.dns_dataset.DNSDataset.__getitem__">__getitem__() (asteroid.data.dns_dataset.DNSDataset method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.data.wham_dataset.html#asteroid.data.wham_dataset.WhamDataset.__getitem__">(asteroid.data.wham_dataset.WhamDataset method)</a>
+</li>
+        <li><a href="apidoc/asteroid.data.whamr_dataset.html#asteroid.data.whamr_dataset.WhamRDataset.__getitem__">(asteroid.data.whamr_dataset.WhamRDataset method)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System._abc_cache">_abc_cache (asteroid.engine.system.System attribute)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System._abc_negative_cache">_abc_negative_cache (asteroid.engine.system.System attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System._abc_negative_cache_version">_abc_negative_cache_version (asteroid.engine.system.System attribute)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System._abc_registry">_abc_registry (asteroid.engine.system.System attribute)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.BatchNorm._check_input_dim">_check_input_dim() (asteroid.masknn.norms.BatchNorm method)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec._EncDec">_EncDec (class in asteroid.filterbanks.enc_dec)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.param_sinc_fb.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB._initialize_filters">_initialize_filters() (asteroid.filterbanks.param_sinc_fb.ParamSincFB method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.ParamSincFB._initialize_filters">(asteroid.filterbanks.ParamSincFB method)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms._LayerNorm">_LayerNorm (class in asteroid.masknn.norms)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.optimizers.html#asteroid.engine.optimizers.adam">adam() (in module asteroid.engine.optimizers)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.AnalyticFreeFB">AnalyticFreeFB (class in asteroid.filterbanks)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.analytic_free_fb.html#asteroid.filterbanks.analytic_free_fb.AnalyticFreeFB">(class in asteroid.filterbanks.analytic_free_fb)</a>, <a href="filterbanks.html#asteroid.filterbanks.analytic_free_fb.AnalyticFreeFB">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.angle">angle() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.apply_complex_mask">apply_complex_mask() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms._LayerNorm.apply_gain_and_bias">apply_gain_and_bias() (asteroid.masknn.norms._LayerNorm method)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.apply_mag_mask">apply_mag_mask() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.apply_real_mask">apply_real_mask() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.torch_utils.html#asteroid.torch_utils.are_models_equal">are_models_equal() (in module asteroid.torch_utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.html#module-asteroid">asteroid (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.html#module-asteroid.data">asteroid.data (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.dns_dataset.html#module-asteroid.data.dns_dataset">asteroid.data.dns_dataset (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#module-asteroid.data.wav">asteroid.data.wav (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wham_dataset.html#module-asteroid.data.wham_dataset">asteroid.data.wham_dataset (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.whamr_dataset.html#module-asteroid.data.whamr_dataset">asteroid.data.whamr_dataset (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wsj0_mix.html#module-asteroid.data.wsj0_mix">asteroid.data.wsj0_mix (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.deprecation_utils.html#module-asteroid.deprecation_utils">asteroid.deprecation_utils (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.html#module-asteroid.engine">asteroid.engine (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.optimizers.html#module-asteroid.engine.optimizers">asteroid.engine.optimizers (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#module-asteroid.engine.system">asteroid.engine.system (module)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.html#module-asteroid.filterbanks">asteroid.filterbanks (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.analytic_free_fb.html#module-asteroid.filterbanks.analytic_free_fb">asteroid.filterbanks.analytic_free_fb (module)</a>, <a href="filterbanks.html#module-asteroid.filterbanks.analytic_free_fb">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#module-asteroid.filterbanks.enc_dec">asteroid.filterbanks.enc_dec (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.free_fb.html#module-asteroid.filterbanks.free_fb">asteroid.filterbanks.free_fb (module)</a>, <a href="filterbanks.html#module-asteroid.filterbanks.free_fb">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.param_sinc_fb.html#module-asteroid.filterbanks.param_sinc_fb">asteroid.filterbanks.param_sinc_fb (module)</a>, <a href="filterbanks.html#module-asteroid.filterbanks.param_sinc_fb">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.stft_fb.html#module-asteroid.filterbanks.stft_fb">asteroid.filterbanks.stft_fb (module)</a>, <a href="filterbanks.html#module-asteroid.filterbanks.stft_fb">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#module-asteroid.filterbanks.transforms">asteroid.filterbanks.transforms (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.html#module-asteroid.losses">asteroid.losses (module)</a>, <a href="losses.html#module-asteroid.losses">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.cluster.html#module-asteroid.losses.cluster">asteroid.losses.cluster (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#module-asteroid.losses.mse">asteroid.losses.mse (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.multi_scale_spectral.html#module-asteroid.losses.multi_scale_spectral">asteroid.losses.multi_scale_spectral (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.pit_wrapper.html#module-asteroid.losses.pit_wrapper">asteroid.losses.pit_wrapper (module)</a>, <a href="losses.html#module-asteroid.losses.pit_wrapper">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.sdr.html#module-asteroid.losses.sdr">asteroid.losses.sdr (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.html#module-asteroid.masknn">asteroid.masknn (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.activations.html#module-asteroid.masknn.activations">asteroid.masknn.activations (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.blocks.html#module-asteroid.masknn.blocks">asteroid.masknn.blocks (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#module-asteroid.masknn.norms">asteroid.masknn.norms (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.metrics.html#module-asteroid.metrics">asteroid.metrics (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.torch_utils.html#module-asteroid.torch_utils">asteroid.torch_utils (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#module-asteroid.utils">asteroid.utils (module)</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.average_arrays_in_dic">average_arrays_in_dic() (in module asteroid.utils)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Encoder.batch_1d_conv">batch_1d_conv() (asteroid.filterbanks.enc_dec.Encoder method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Encoder.batch_1d_conv">(asteroid.filterbanks.Encoder method)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.losses.cluster.html#asteroid.losses.cluster.batch_matrix_norm">batch_matrix_norm() (in module asteroid.losses.cluster)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.BatchNorm">BatchNorm (class in asteroid.masknn.norms)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.pit_wrapper.html#asteroid.losses.pit_wrapper.PITLossWrapper.best_perm_from_perm_avg_loss">best_perm_from_perm_avg_loss() (asteroid.losses.pit_wrapper.PITLossWrapper static method)</a>, <a href="losses.html#asteroid.losses.pit_wrapper.PITLossWrapper.best_perm_from_perm_avg_loss">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.bN">bN (in module asteroid.masknn.norms)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.cgLN">cgLN (in module asteroid.masknn.norms)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.ChanLN">ChanLN (class in asteroid.masknn.norms)</a>
+</li>
+      <li><a href="masknn.html#asteroid.masknn.norms.ChanLN">ChanLN() (in module asteroid.masknn.norms)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.check_complex">check_complex() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.ChimeraPP">ChimeraPP (class in asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.cLN">cLN (in module asteroid.masknn.norms)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.common_step">common_step() (asteroid.engine.system.System method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec._EncDec.compute_filter_pinv">compute_filter_pinv() (asteroid.filterbanks.enc_dec._EncDec method)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.multi_scale_spectral.html#asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.compute_spectral_loss">compute_spectral_loss() (asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral method)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.configure_optimizers">configure_optimizers() (asteroid.engine.system.System method)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.Conv1DBlock">Conv1DBlock (class in asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="masknn.html#asteroid.masknn.blocks.Conv1DBlock">Conv1DBlock() (in module asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.CumLN">CumLN (class in asteroid.masknn.norms)</a>
+</li>
+      <li><a href="masknn.html#asteroid.masknn.norms.CumLN">CumLN() (in module asteroid.masknn.norms)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.MultipleWav.data">data() (asteroid.data.wav.MultipleWav property)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.data">(asteroid.data.wav.SingleWav property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Decoder">Decoder (class in asteroid.filterbanks)</a>, <a href="filterbanks.html#asteroid.filterbanks.Decoder">[1]</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Decoder">(class in asteroid.filterbanks.enc_dec)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.losses.cluster.html#asteroid.losses.cluster.deep_clustering_loss">deep_clustering_loss() (in module asteroid.losses.cluster)</a>
+</li>
+      <li><a href="apidoc/asteroid.deprecation_utils.html#asteroid.deprecation_utils.deprecate_func">deprecate_func() (in module asteroid.deprecation_utils)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.deprecation_utils.html#asteroid.deprecation_utils.DeprecationMixin">DeprecationMixin (class in asteroid.deprecation_utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.dns_dataset.html#asteroid.data.dns_dataset.DNSDataset">DNSDataset (class in asteroid.data.dns_dataset)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.DPRNN">DPRNN (class in asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="masknn.html#asteroid.masknn.blocks.DPRNN">DPRNN() (in module asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.DPRNNBlock">DPRNNBlock (class in asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="masknn.html#asteroid.masknn.blocks.DPRNNBlock">DPRNNBlock() (in module asteroid.masknn.blocks)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Encoder">Encoder (class in asteroid.filterbanks)</a>, <a href="filterbanks.html#asteroid.filterbanks.Encoder">[1]</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Encoder">(class in asteroid.filterbanks.enc_dec)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Filterbank">Filterbank (class in asteroid.filterbanks)</a>, <a href="filterbanks.html#asteroid.filterbanks.Filterbank">[1]</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Filterbank">(class in asteroid.filterbanks.enc_dec)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.filterbanks.analytic_free_fb.html#asteroid.filterbanks.analytic_free_fb.AnalyticFreeFB.filters">filters() (asteroid.filterbanks.analytic_free_fb.AnalyticFreeFB property)</a>, <a href="filterbanks.html#asteroid.filterbanks.analytic_free_fb.AnalyticFreeFB.filters">[1]</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.AnalyticFreeFB.filters">(asteroid.filterbanks.AnalyticFreeFB property)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec._EncDec.filters">(asteroid.filterbanks.enc_dec._EncDec property)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Filterbank.filters">(asteroid.filterbanks.enc_dec.Filterbank property)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Filterbank.filters">(asteroid.filterbanks.Filterbank property)</a>, <a href="filterbanks.html#asteroid.filterbanks.Filterbank.filters">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.free_fb.html#asteroid.filterbanks.free_fb.FreeFB.filters">(asteroid.filterbanks.free_fb.FreeFB property)</a>, <a href="filterbanks.html#asteroid.filterbanks.free_fb.FreeFB.filters">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.FreeFB.filters">(asteroid.filterbanks.FreeFB property)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.param_sinc_fb.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB.filters">(asteroid.filterbanks.param_sinc_fb.ParamSincFB property)</a>, <a href="filterbanks.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB.filters">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.ParamSincFB.filters">(asteroid.filterbanks.ParamSincFB property)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.stft_fb.html#asteroid.filterbanks.stft_fb.STFTFB.filters">(asteroid.filterbanks.stft_fb.STFTFB property)</a>, <a href="filterbanks.html#asteroid.filterbanks.stft_fb.STFTFB.filters">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.STFTFB.filters">(asteroid.filterbanks.STFTFB property)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.losses.pit_wrapper.html#asteroid.losses.pit_wrapper.PITLossWrapper.find_best_perm">find_best_perm() (asteroid.losses.pit_wrapper.PITLossWrapper static method)</a>, <a href="losses.html#asteroid.losses.pit_wrapper.PITLossWrapper.find_best_perm">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.flatten_dict">flatten_dict() (in module asteroid.utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.forward">forward() (asteroid.engine.system.System method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Decoder.forward">(asteroid.filterbanks.Decoder method)</a>, <a href="filterbanks.html#asteroid.filterbanks.Decoder.forward">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Decoder.forward">(asteroid.filterbanks.enc_dec.Decoder method)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Encoder.forward">(asteroid.filterbanks.enc_dec.Encoder method)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Encoder.forward">(asteroid.filterbanks.Encoder method)</a>, <a href="filterbanks.html#asteroid.filterbanks.Encoder.forward">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.PairwiseMSE.forward">(asteroid.losses.mse.PairwiseMSE method)</a>
+</li>
+        <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.SingleSrcMSE.forward">(asteroid.losses.mse.SingleSrcMSE method)</a>
+</li>
+        <li><a href="apidoc/asteroid.losses.multi_scale_spectral.html#asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.forward">(asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral method)</a>
+</li>
+        <li><a href="apidoc/asteroid.losses.pit_wrapper.html#asteroid.losses.pit_wrapper.PITLossWrapper.forward">(asteroid.losses.pit_wrapper.PITLossWrapper method)</a>, <a href="losses.html#asteroid.losses.pit_wrapper.PITLossWrapper.forward">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.losses.sdr.html#asteroid.losses.sdr.MultiSrcNegSDR.forward">(asteroid.losses.sdr.MultiSrcNegSDR method)</a>
+</li>
+        <li><a href="apidoc/asteroid.losses.sdr.html#asteroid.losses.sdr.PairwiseNegSDR.forward">(asteroid.losses.sdr.PairwiseNegSDR method)</a>
+</li>
+        <li><a href="apidoc/asteroid.losses.sdr.html#asteroid.losses.sdr.SingleSrcNegSDR.forward">(asteroid.losses.sdr.SingleSrcNegSDR method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.ChimeraPP.forward">(asteroid.masknn.blocks.ChimeraPP method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.Conv1DBlock.forward">(asteroid.masknn.blocks.Conv1DBlock method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.DPRNN.forward">(asteroid.masknn.blocks.DPRNN method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.DPRNNBlock.forward">(asteroid.masknn.blocks.DPRNNBlock method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.SingleRNN.forward">(asteroid.masknn.blocks.SingleRNN method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.StackedResidualRNN.forward">(asteroid.masknn.blocks.StackedResidualRNN method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.TDConvNet.forward">(asteroid.masknn.blocks.TDConvNet method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.ChanLN.forward">(asteroid.masknn.norms.ChanLN method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.CumLN.forward">(asteroid.masknn.norms.CumLN method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.GlobLN.forward">(asteroid.masknn.norms.GlobLN method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.FreeFB">FreeFB (class in asteroid.filterbanks)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.free_fb.html#asteroid.filterbanks.free_fb.FreeFB">(class in asteroid.filterbanks.free_fb)</a>, <a href="filterbanks.html#asteroid.filterbanks.free_fb.FreeFB">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.from_mag_and_phase">from_mag_and_phase() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.from_numpy">from_numpy() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.from_torchaudio">from_torchaudio() (in module asteroid.filterbanks.transforms)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.optimizers.html#asteroid.engine.optimizers.get">get() (in module asteroid.engine.optimizers)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.masknn.activations.html#asteroid.masknn.activations.get">(in module asteroid.masknn.activations)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.get">(in module asteroid.masknn.norms)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec._EncDec.get_config">get_config() (asteroid.filterbanks.enc_dec._EncDec method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Filterbank.get_config">(asteroid.filterbanks.enc_dec.Filterbank method)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Filterbank.get_config">(asteroid.filterbanks.Filterbank method)</a>, <a href="filterbanks.html#asteroid.filterbanks.Filterbank.get_config">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.param_sinc_fb.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB.get_config">(asteroid.filterbanks.param_sinc_fb.ParamSincFB method)</a>, <a href="filterbanks.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB.get_config">[1]</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.ParamSincFB.get_config">(asteroid.filterbanks.ParamSincFB method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.DPRNN.get_config">(asteroid.masknn.blocks.DPRNN method)</a>
+</li>
+        <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.TDConvNet.get_config">(asteroid.masknn.blocks.TDConvNet method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec._EncDec.get_filters">get_filters() (asteroid.filterbanks.enc_dec._EncDec method)</a>
+</li>
+      <li><a href="apidoc/asteroid.metrics.html#asteroid.metrics.get_metrics">get_metrics() (in module asteroid.metrics)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.pit_wrapper.html#asteroid.losses.pit_wrapper.PITLossWrapper.get_pw_losses">get_pw_losses() (asteroid.losses.pit_wrapper.PITLossWrapper static method)</a>, <a href="losses.html#asteroid.losses.pit_wrapper.PITLossWrapper.get_pw_losses">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.get_wav_random_start_stop">get_wav_random_start_stop() (in module asteroid.utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.gLN">gLN (in module asteroid.masknn.norms)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.norms.html#asteroid.masknn.norms.GlobLN">GlobLN (class in asteroid.masknn.norms)</a>
+</li>
+      <li><a href="masknn.html#asteroid.masknn.norms.GlobLN">GlobLN() (in module asteroid.masknn.norms)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.has_arg">has_arg() (in module asteroid.utils)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.data.wsj0_mix.html#asteroid.data.wsj0_mix.WSJmixDataset.identity">identity() (asteroid.data.wsj0_mix.WSJmixDataset method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.isfloat">isfloat() (in module asteroid.utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.isint">isint() (in module asteroid.utils)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.masknn.activations.html#asteroid.masknn.activations.leaky_relu">leaky_relu() (in module asteroid.masknn.activations)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.masknn.activations.html#asteroid.masknn.activations.linear">linear() (in module asteroid.masknn.activations)</a>
+</li>
+      <li><a href="apidoc/asteroid.torch_utils.html#asteroid.torch_utils.load_state_dict_in">load_state_dict_in() (in module asteroid.torch_utils)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="filterbanks.html#asteroid.filterbanks.make_enc_dec">make_enc_dec (class in asteroid.filterbanks)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.param_sinc_fb.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB.make_filters">make_filters() (asteroid.filterbanks.param_sinc_fb.ParamSincFB method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.ParamSincFB.make_filters">(asteroid.filterbanks.ParamSincFB method)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.engine.optimizers.html#asteroid.engine.optimizers.make_optimizer">make_optimizer() (in module asteroid.engine.optimizers)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.mul_c">mul_c() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.MultipleWav">MultipleWav (class in asteroid.data.wav)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.multisrc_mse">multisrc_mse (in module asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.MultiSrcMSE">MultiSrcMSE (in module asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.sdr.html#asteroid.losses.sdr.MultiSrcNegSDR">MultiSrcNegSDR (class in asteroid.losses.sdr)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.none_to_string">none_to_string() (asteroid.engine.system.System static method)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.nonpit_mse">nonpit_mse (in module asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.NonPitMSE">NonPitMSE (in module asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.sdr.html#asteroid.losses.sdr.NonPitSDR">NonPitSDR (class in asteroid.losses.sdr)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.losses.multi_scale_spectral.html#asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.norm1">norm1() (asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral static method)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.nosrc_mse">nosrc_mse (in module asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.NoSrcMSE">NoSrcMSE (class in asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.sdr.html#asteroid.losses.sdr.NoSrcSDR">NoSrcSDR (class in asteroid.losses.sdr)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.on_batch_end">on_batch_end() (asteroid.engine.system.System method)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.on_batch_start">on_batch_start() (asteroid.engine.system.System method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.on_epoch_end">on_epoch_end() (asteroid.engine.system.System method)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.on_epoch_start">on_epoch_start() (asteroid.engine.system.System method)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.on_save_checkpoint">on_save_checkpoint() (asteroid.engine.system.System method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.torch_utils.html#asteroid.torch_utils.pad_x_to_y">pad_x_to_y() (in module asteroid.torch_utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.pairwise_mse">pairwise_mse (in module asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.PairwiseMSE">PairwiseMSE (class in asteroid.losses.mse)</a>
+</li>
+      <li><a href="losses.html#asteroid.losses.mse.PairwiseMSE">PairwiseMSE() (in module asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.sdr.html#asteroid.losses.sdr.PairwiseNegSDR">PairwiseNegSDR (class in asteroid.losses.sdr)</a>
+</li>
+      <li><a href="losses.html#asteroid.losses.sdr.PairwiseNegSDR">PairwiseNegSDR() (in module asteroid.losses.sdr)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.ParamSincFB">ParamSincFB (class in asteroid.filterbanks)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.param_sinc_fb.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB">(class in asteroid.filterbanks.param_sinc_fb)</a>, <a href="filterbanks.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.parse_args_as_dict">parse_args_as_dict() (in module asteroid.utils)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.part_data">part_data() (asteroid.data.wav.SingleWav method)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.stft_fb.html#asteroid.filterbanks.stft_fb.perfect_synthesis_window">perfect_synthesis_window() (in module asteroid.filterbanks.stft_fb)</a>, <a href="filterbanks.html#asteroid.filterbanks.stft_fb.perfect_synthesis_window">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Decoder.pinv_of">pinv_of() (asteroid.filterbanks.Decoder class method)</a>, <a href="filterbanks.html#asteroid.filterbanks.Decoder.pinv_of">[1]</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Decoder.pinv_of">(asteroid.filterbanks.enc_dec.Decoder class method)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.enc_dec.html#asteroid.filterbanks.enc_dec.Encoder.pinv_of">(asteroid.filterbanks.enc_dec.Encoder class method)</a>
+</li>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.Encoder.pinv_of">(asteroid.filterbanks.Encoder class method)</a>, <a href="filterbanks.html#asteroid.filterbanks.Encoder.pinv_of">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.losses.pit_wrapper.html#asteroid.losses.pit_wrapper.PITLossWrapper">PITLossWrapper (class in asteroid.losses.pit_wrapper)</a>, <a href="losses.html#asteroid.losses.pit_wrapper.PITLossWrapper">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.activations.html#asteroid.masknn.activations.prelu">prelu() (in module asteroid.masknn.activations)</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.prepare_parser_from_dict">prepare_parser_from_dict() (in module asteroid.utils)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.random_part_data">random_part_data() (asteroid.data.wav.SingleWav method)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.activations.html#asteroid.masknn.activations.relu">relu() (in module asteroid.masknn.activations)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.losses.pit_wrapper.html#asteroid.losses.pit_wrapper.PITLossWrapper.reorder_source">reorder_source() (asteroid.losses.pit_wrapper.PITLossWrapper static method)</a>, <a href="losses.html#asteroid.losses.pit_wrapper.PITLossWrapper.reorder_source">[1]</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.optimizers.html#asteroid.engine.optimizers.rmsprop">rmsprop() (in module asteroid.engine.optimizers)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.save_space">save_space() (asteroid.data.wav.SingleWav method)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.optimizers.html#asteroid.engine.optimizers.sgd">sgd() (in module asteroid.engine.optimizers)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wsj0_mix.html#asteroid.data.wsj0_mix.WSJmixDataset.shuffle_list">shuffle_list() (asteroid.data.wsj0_mix.WSJmixDataset method)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.activations.html#asteroid.masknn.activations.sigmoid">sigmoid() (in module asteroid.masknn.activations)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.SingleRNN">SingleRNN (class in asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="masknn.html#asteroid.masknn.blocks.SingleRNN">SingleRNN() (in module asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.singlesrc_mse">singlesrc_mse (in module asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.mse.html#asteroid.losses.mse.SingleSrcMSE">SingleSrcMSE (class in asteroid.losses.mse)</a>
+</li>
+      <li><a href="apidoc/asteroid.losses.multi_scale_spectral.html#asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral">SingleSrcMultiScaleSpectral (class in asteroid.losses.multi_scale_spectral)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.losses.sdr.html#asteroid.losses.sdr.SingleSrcNegSDR">SingleSrcNegSDR (class in asteroid.losses.sdr)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav">SingleWav (class in asteroid.data.wav)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.activations.html#asteroid.masknn.activations.softmax">softmax() (in module asteroid.masknn.activations)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.StackedResidualRNN">StackedResidualRNN (class in asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.STFTFB">STFTFB (class in asteroid.filterbanks)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.stft_fb.html#asteroid.filterbanks.stft_fb.STFTFB">(class in asteroid.filterbanks.stft_fb)</a>, <a href="filterbanks.html#asteroid.filterbanks.stft_fb.STFTFB">[1]</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.str2bool">str2bool() (in module asteroid.utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.str2bool_arg">str2bool_arg() (in module asteroid.utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.str_int_float">str_int_float() (in module asteroid.utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System">System (class in asteroid.engine.system)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.take_cat">take_cat() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.take_mag">take_mag() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.take_reim">take_reim() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.activations.html#asteroid.masknn.activations.tanh">tanh() (in module asteroid.masknn.activations)</a>
+</li>
+      <li><a href="apidoc/asteroid.masknn.blocks.html#asteroid.masknn.blocks.TDConvNet">TDConvNet (class in asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="masknn.html#asteroid.masknn.blocks.TDConvNet">TDConvNet() (in module asteroid.masknn.blocks)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.temp_save">temp_save() (asteroid.data.wav.SingleWav method)</a>
+</li>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.tensors_to_device">tensors_to_device() (in module asteroid.utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.tng_dataloader">tng_dataloader() (asteroid.engine.system.System method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.utils.html#asteroid.utils.to_cuda">to_cuda() (in module asteroid.utils)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.param_sinc_fb.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB.to_hz">to_hz() (asteroid.filterbanks.param_sinc_fb.ParamSincFB static method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.ParamSincFB.to_hz">(asteroid.filterbanks.ParamSincFB static method)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.filterbanks.param_sinc_fb.html#asteroid.filterbanks.param_sinc_fb.ParamSincFB.to_mel">to_mel() (asteroid.filterbanks.param_sinc_fb.ParamSincFB static method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.filterbanks.html#asteroid.filterbanks.ParamSincFB.to_mel">(asteroid.filterbanks.ParamSincFB static method)</a>
+</li>
+      </ul></li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.to_numpy">to_numpy() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.filterbanks.transforms.html#asteroid.filterbanks.transforms.to_torchaudio">to_torchaudio() (in module asteroid.filterbanks.transforms)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.train_dataloader">train_dataloader() (asteroid.engine.system.System method)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.training_step">training_step() (asteroid.engine.system.System method)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wsj0_mix.html#asteroid.data.wsj0_mix.transform">transform() (in module asteroid.data.wsj0_mix)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.unsqueeze_if_dp_or_ddp">unsqueeze_if_dp_or_ddp() (asteroid.engine.system.System method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.MultipleWav.update_info">update_info() (asteroid.data.wav.MultipleWav method)</a>
+
+      <ul>
+        <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.update_info">(asteroid.data.wav.SingleWav method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.val_dataloader">val_dataloader() (asteroid.engine.system.System method)</a>
+</li>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.validation_end">validation_end() (asteroid.engine.system.System method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.engine.system.html#asteroid.engine.system.System.validation_step">validation_step() (asteroid.engine.system.System method)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.verify">verify() (asteroid.data.wav.SingleWav method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="W">W</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.deprecation_utils.html#asteroid.deprecation_utils.DeprecationMixin.warn_deprecated">warn_deprecated() (asteroid.deprecation_utils.DeprecationMixin method)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.wav_id">wav_id() (asteroid.data.wav.SingleWav property)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.wav_len">wav_len() (asteroid.data.wav.SingleWav property)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wham_dataset.html#asteroid.data.wham_dataset.WhamDataset">WhamDataset (class in asteroid.data.wham_dataset)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="apidoc/asteroid.data.whamr_dataset.html#asteroid.data.whamr_dataset.WhamRDataset">WhamRDataset (class in asteroid.data.whamr_dataset)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.write_wav">write_wav() (asteroid.data.wav.SingleWav method)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wsj0_mix.html#asteroid.data.wsj0_mix.WSJ2mixDataset">WSJ2mixDataset (class in asteroid.data.wsj0_mix)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wsj0_mix.html#asteroid.data.wsj0_mix.WSJ3mixDataset">WSJ3mixDataset (class in asteroid.data.wsj0_mix)</a>
+</li>
+      <li><a href="apidoc/asteroid.data.wsj0_mix.html#asteroid.data.wsj0_mix.WSJmixDataset">WSJmixDataset (class in asteroid.data.wsj0_mix)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

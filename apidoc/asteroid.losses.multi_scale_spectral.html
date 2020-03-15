@@ -1,0 +1,345 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>asteroid.losses.multi_scale_spectral module &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroidapidoc/asteroid.losses.multi_scale_spectral.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="../_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>asteroid.losses.multi_scale_spectral module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/asteroid.losses.multi_scale_spectral.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-asteroid.losses.multi_scale_spectral">
+<span id="asteroid-losses-multi-scale-spectral-module"></span><h1>asteroid.losses.multi_scale_spectral module<a class="headerlink" href="#module-asteroid.losses.multi_scale_spectral" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral">
+<em class="property">class </em><code class="sig-prename descclassname">asteroid.losses.multi_scale_spectral.</code><code class="sig-name descname">SingleSrcMultiScaleSpectral</code><span class="sig-paren">(</span><em class="sig-param">n_filters=None</em>, <em class="sig-param">windows_size=None</em>, <em class="sig-param">hops_size=None</em>, <em class="sig-param">alpha=1.0</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/losses/multi_scale_spectral.html#SingleSrcMultiScaleSpectral"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">torch.nn.modules.loss._Loss</span></code></p>
+<p>Measure multi-scale spectral loss as described in [1]</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>n_filters</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – list containing the number of filter desired for
+each STFT</p></li>
+<li><p><strong>windows_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – list containing the size of the window desired for
+each STFT</p></li>
+<li><p><strong>hops_size</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a>) – list containing the size of the hop desired for
+each STFT</p></li>
+</ul>
+</dd>
+</dl>
+<dl>
+<dt>Shape:</dt><dd><dl class="simple">
+<dt>est_targets (<a class="reference external" href="https://pytorch.org/docs/master/tensors.html#torch.Tensor" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>): Expected shape [batch, time].</dt><dd><p>Batch of target estimates.</p>
+</dd>
+<dt>targets (<a class="reference external" href="https://pytorch.org/docs/master/tensors.html#torch.Tensor" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a>): Expected shape [batch, time].</dt><dd><p>Batch of training targets.</p>
+</dd>
+</dl>
+<p>alpha (float) : Weighting factor for the log term</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://pytorch.org/docs/master/tensors.html#torch.Tensor" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> – with shape [batch]</p>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">targets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">32000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">est_targets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">32000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using it by itself on a pair of source/estimate</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loss_func</span> <span class="o">=</span> <span class="n">SingleSrcMultiScaleSpectral</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loss</span> <span class="o">=</span> <span class="n">loss_func</span><span class="p">(</span><span class="n">est_targets</span><span class="p">,</span> <span class="n">targets</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">asteroid.losses</span> <span class="kn">import</span> <span class="n">PITLossWrapper</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">targets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">32000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">est_targets</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">32000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Using it with PITLossWrapper with sets of source/estimates</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loss_func</span> <span class="o">=</span> <span class="n">PITLossWrapper</span><span class="p">(</span><span class="n">SingleSrcMultiScaleSpectral</span><span class="p">(),</span>
+<span class="gp">&gt;&gt;&gt; </span>                           <span class="n">pit_from</span><span class="o">=</span><span class="s1">&#39;pw_pt&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">loss</span> <span class="o">=</span> <span class="n">loss_func</span><span class="p">(</span><span class="n">est_targets</span><span class="p">,</span> <span class="n">targets</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric">References</p>
+<p>[1] Jesse Engel and Lamtharn (Hanoi) Hantrakul and Chenjie Gu and
+Adam Roberts DDSP: Differentiable Digital Signal Processing
+International Conference on Learning Representations ICLR 2020 $</p>
+<dl class="method">
+<dt id="asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.compute_spectral_loss">
+<code class="sig-name descname">compute_spectral_loss</code><span class="sig-paren">(</span><em class="sig-param">encoder</em>, <em class="sig-param">est_target</em>, <em class="sig-param">target</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/losses/multi_scale_spectral.html#SingleSrcMultiScaleSpectral.compute_spectral_loss"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.compute_spectral_loss" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">est_target</em>, <em class="sig-param">target</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/losses/multi_scale_spectral.html#SingleSrcMultiScaleSpectral.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.norm1">
+<em class="property">static </em><code class="sig-name descname">norm1</code><span class="sig-paren">(</span><em class="sig-param">a</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/losses/multi_scale_spectral.html#SingleSrcMultiScaleSpectral.norm1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.losses.multi_scale_spectral.SingleSrcMultiScaleSpectral.norm1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

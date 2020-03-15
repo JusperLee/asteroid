@@ -1,0 +1,520 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>asteroid.utils &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroid_modules/asteroid/utils.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="../../_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>asteroid.utils</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for asteroid.utils</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">collections</span>
+<span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">argparse</span>
+
+
+<div class="viewcode-block" id="has_arg"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.has_arg">[docs]</a><span class="k">def</span> <span class="nf">has_arg</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Checks if a callable accepts a given keyword argument.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        fn (callable): Callable to inspect.</span>
+<span class="sd">        name (str): Check if `fn` can be called with `name` as a keyword</span>
+<span class="sd">            argument.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: whether `fn` accepts a `name` keyword argument.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">signature</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">signature</span><span class="p">(</span><span class="n">fn</span><span class="p">)</span>
+    <span class="n">parameter</span> <span class="o">=</span> <span class="n">signature</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">parameter</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">parameter</span><span class="o">.</span><span class="n">kind</span> <span class="ow">in</span> <span class="p">(</span><span class="n">inspect</span><span class="o">.</span><span class="n">Parameter</span><span class="o">.</span><span class="n">POSITIONAL_OR_KEYWORD</span><span class="p">,</span>
+                               <span class="n">inspect</span><span class="o">.</span><span class="n">Parameter</span><span class="o">.</span><span class="n">KEYWORD_ONLY</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="to_cuda"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.to_cuda">[docs]</a><span class="k">def</span> <span class="nf">to_cuda</span><span class="p">(</span><span class="n">tensors</span><span class="p">):</span>  <span class="c1"># pragma: no cover (No CUDA on travis)</span>
+    <span class="sd">&quot;&quot;&quot; Transfer tensor, dict or list of tensors to GPU.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        tensors (:class:`torch.Tensor`, list or dict): May be a single, a</span>
+<span class="sd">            list or a dictionary of tensors.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        :class:`torch.Tensor`:</span>
+<span class="sd">            Same as input but transferred to cuda. Goes through lists and dicts</span>
+<span class="sd">            and transfers the torch.Tensor to cuda. Leaves the rest untouched.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tensors</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">tensors</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tensors</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">to_cuda</span><span class="p">(</span><span class="n">tens</span><span class="p">)</span> <span class="k">for</span> <span class="n">tens</span> <span class="ow">in</span> <span class="n">tensors</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tensors</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">tensors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">tensors</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">to_cuda</span><span class="p">(</span><span class="n">tensors</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">tensors</span>
+    <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;tensors must be a tensor or a list or dict of tensors. &#39;</span>
+                    <span class="s1">&#39; Got tensors of type </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">tensors</span><span class="p">)))</span></div>
+
+
+<div class="viewcode-block" id="tensors_to_device"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.tensors_to_device">[docs]</a><span class="k">def</span> <span class="nf">tensors_to_device</span><span class="p">(</span><span class="n">tensors</span><span class="p">,</span> <span class="n">device</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Transfer tensor, dict or list of tensors to device.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        tensors (:class:`torch.Tensor`): May be a single, a list or a</span>
+<span class="sd">            dictionary of tensors.</span>
+<span class="sd">        device (:class: `torch.device`): the device where to place the tensors.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        Union [:class:`torch.Tensor`, list, tuple, dict]:</span>
+<span class="sd">            Same as input but transferred to device.</span>
+<span class="sd">            Goes through lists and dicts and transfers the torch.Tensor to</span>
+<span class="sd">            device. Leaves the rest untouched.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tensors</span><span class="p">,</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">tensors</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tensors</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">tensors_to_device</span><span class="p">(</span><span class="n">tens</span><span class="p">,</span> <span class="n">device</span><span class="p">)</span> <span class="k">for</span> <span class="n">tens</span> <span class="ow">in</span> <span class="n">tensors</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">tensors</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">tensors</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">tensors</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">tensors_to_device</span><span class="p">(</span><span class="n">tensors</span><span class="p">[</span><span class="n">key</span><span class="p">],</span> <span class="n">device</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">tensors</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">tensors</span></div>
+
+
+<div class="viewcode-block" id="prepare_parser_from_dict"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.prepare_parser_from_dict">[docs]</a><span class="k">def</span> <span class="nf">prepare_parser_from_dict</span><span class="p">(</span><span class="n">dic</span><span class="p">,</span> <span class="n">parser</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Prepare an argparser from a dictionary.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dic (dict): Two-level config dictionary with unique bottom-level keys.</span>
+<span class="sd">        parser (argparse.ArgumentParser, optional): If a parser already</span>
+<span class="sd">            exists, add the keys from the dictionary on the top of it.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        argparse.ArgumentParser:</span>
+<span class="sd">            Parser instance with groups corresponding to the first level keys</span>
+<span class="sd">            and arguments corresponding to the second level keys with default</span>
+<span class="sd">            values given by the values.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">standardized_entry_type</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; If the default value is None, replace NoneType by str_int_float.</span>
+<span class="sd">            If the default value is boolean, look for boolean strings.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">str_int_float</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">str2bool</span><span class="p">(</span><span class="n">value</span><span class="p">),</span> <span class="nb">bool</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">str2bool_arg</span>
+        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">parser</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">parser</span> <span class="o">=</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentParser</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">group</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">add_argument_group</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">kk</span> <span class="ow">in</span> <span class="n">dic</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">entry_type</span> <span class="o">=</span> <span class="n">standardized_entry_type</span><span class="p">(</span><span class="n">dic</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">kk</span><span class="p">])</span>
+            <span class="n">group</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s1">&#39;--&#39;</span> <span class="o">+</span> <span class="n">kk</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">dic</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">kk</span><span class="p">],</span>
+                               <span class="nb">type</span><span class="o">=</span><span class="n">entry_type</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">parser</span></div>
+
+
+<div class="viewcode-block" id="str_int_float"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.str_int_float">[docs]</a><span class="k">def</span> <span class="nf">str_int_float</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Type to convert strings to int, float (in this order) if possible.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (str): Value to convert.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int, float, str: Converted value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">isint</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">isfloat</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="str2bool"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.str2bool">[docs]</a><span class="k">def</span> <span class="nf">str2bool</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Type to convert strings to Boolean (returns input if not boolean) &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span>
+    <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;yes&#39;</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">value</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;no&#39;</span><span class="p">,</span> <span class="s1">&#39;false&#39;</span><span class="p">,</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">value</span></div>
+
+
+<div class="viewcode-block" id="str2bool_arg"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.str2bool_arg">[docs]</a><span class="k">def</span> <span class="nf">str2bool_arg</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Argparse type to convert strings to Boolean &quot;&quot;&quot;</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">str2bool</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">bool</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span>
+    <span class="k">raise</span> <span class="n">argparse</span><span class="o">.</span><span class="n">ArgumentTypeError</span><span class="p">(</span><span class="s1">&#39;Boolean value expected.&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="isfloat"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.isfloat">[docs]</a><span class="k">def</span> <span class="nf">isfloat</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Computes whether `value` can be cast to a float.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (str): Value to check.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: Whether `value` can be cast to a float.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="isint"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.isint">[docs]</a><span class="k">def</span> <span class="nf">isint</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Computes whether `value` can be cast to an int</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        value (str): Value to check.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        bool: Whether `value` can be cast to an int.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="nb">int</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<div class="viewcode-block" id="parse_args_as_dict"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.parse_args_as_dict">[docs]</a><span class="k">def</span> <span class="nf">parse_args_as_dict</span><span class="p">(</span><span class="n">parser</span><span class="p">,</span> <span class="n">return_plain_args</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Get a dict of dicts out of process `parser.parse_args()`</span>
+
+<span class="sd">    Top-level keys corresponding to groups and bottom-level keys corresponding</span>
+<span class="sd">    to arguments. Under `&#39;main_args&#39;`, the arguments which don&#39;t belong to a</span>
+<span class="sd">    argparse group (i.e main arguments defined before parsing from a dict) can</span>
+<span class="sd">    be found.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        parser (argparse.ArgumentParser): ArgumentParser instance containing</span>
+<span class="sd">            groups. Output of `prepare_parser_from_dict`.</span>
+<span class="sd">        return_plain_args (bool): Whether to return the output or</span>
+<span class="sd">            `parser.parse_args()`.</span>
+<span class="sd">        args (list): List of arguments as read from the command line.</span>
+<span class="sd">            Used for unit testing.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict:</span>
+<span class="sd">            Dictionary of dictionaries containing the arguments. Optionally the</span>
+<span class="sd">            direct output `parser.parse_args()`.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">args_dic</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">parser</span><span class="o">.</span><span class="n">_action_groups</span><span class="p">:</span>
+        <span class="n">group_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">a</span><span class="o">.</span><span class="n">dest</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">dest</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+                      <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">group</span><span class="o">.</span><span class="n">_group_actions</span><span class="p">}</span>
+        <span class="n">args_dic</span><span class="p">[</span><span class="n">group</span><span class="o">.</span><span class="n">title</span><span class="p">]</span> <span class="o">=</span> <span class="n">group_dict</span>
+    <span class="n">args_dic</span><span class="p">[</span><span class="s1">&#39;main_args&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">args_dic</span><span class="p">[</span><span class="s1">&#39;optional arguments&#39;</span><span class="p">]</span>
+    <span class="k">del</span> <span class="n">args_dic</span><span class="p">[</span><span class="s1">&#39;optional arguments&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">return_plain_args</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">args_dic</span><span class="p">,</span> <span class="n">args</span>
+    <span class="k">return</span> <span class="n">args_dic</span></div>
+
+
+<div class="viewcode-block" id="flatten_dict"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.flatten_dict">[docs]</a><span class="k">def</span> <span class="nf">flatten_dict</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">parent_key</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;_&#39;</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Flattens a dictionary into a single-level dictionary while preserving</span>
+<span class="sd">    parent keys. Taken from https://stackoverflow.com/questions/6027558/</span>
+<span class="sd">    flatten-nested-dictionaries-compressing-keys?answertab=votes#tab-top</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        d (collections.MutableMapping): Dictionary to be flattened.</span>
+<span class="sd">        parent_key (str): String to use as a prefix to all subsequent keys.</span>
+<span class="sd">        sep (str): String to use as a separator between two key levels.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: Single-level dictionary, flattened.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">items</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">new_key</span> <span class="o">=</span> <span class="n">parent_key</span> <span class="o">+</span> <span class="n">sep</span> <span class="o">+</span> <span class="n">k</span> <span class="k">if</span> <span class="n">parent_key</span> <span class="k">else</span> <span class="n">k</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">collections</span><span class="o">.</span><span class="n">MutableMapping</span><span class="p">):</span>
+            <span class="n">items</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">flatten_dict</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">new_key</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="n">sep</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">items</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">new_key</span><span class="p">,</span> <span class="n">v</span><span class="p">))</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">items</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="average_arrays_in_dic"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.average_arrays_in_dic">[docs]</a><span class="k">def</span> <span class="nf">average_arrays_in_dic</span><span class="p">(</span><span class="n">dic</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Take average of numpy arrays in a dictionary.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dic (dict): Input dictionary to take average from</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        dict: New dictionary with array averaged.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Copy dic first</span>
+    <span class="n">dic</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">dic</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">dic</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">):</span>
+            <span class="n">dic</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">dic</span></div>
+
+
+<div class="viewcode-block" id="get_wav_random_start_stop"><a class="viewcode-back" href="../../apidoc/asteroid.utils.html#asteroid.utils.get_wav_random_start_stop">[docs]</a><span class="k">def</span> <span class="nf">get_wav_random_start_stop</span><span class="p">(</span><span class="n">signal_len</span><span class="p">,</span> <span class="n">desired_len</span><span class="o">=</span><span class="mi">4</span><span class="o">*</span><span class="mi">8000</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Get indexes for a chunk of signal of a given length.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        signal_len (int): length of the signal to trim.</span>
+<span class="sd">        desired_len (int): the length of [start:stop]</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        tuple: random start integer, stop integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">signal_len</span> <span class="o">==</span> <span class="n">desired_len</span> <span class="ow">or</span> <span class="n">desired_len</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">rand_start</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">rand_start</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">signal_len</span> <span class="o">-</span> <span class="n">desired_len</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">desired_len</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">stop</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">stop</span> <span class="o">=</span> <span class="n">rand_start</span> <span class="o">+</span> <span class="n">desired_len</span>
+    <span class="k">return</span> <span class="n">rand_start</span><span class="p">,</span> <span class="n">stop</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

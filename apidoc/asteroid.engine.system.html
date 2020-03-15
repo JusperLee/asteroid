@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>asteroid.engine.system module &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroidapidoc/asteroid.engine.system.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="../_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>asteroid.engine.system module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/asteroid.engine.system.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-asteroid.engine.system">
+<span id="asteroid-engine-system-module"></span><h1>asteroid.engine.system module<a class="headerlink" href="#module-asteroid.engine.system" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="asteroid.engine.system.System">
+<em class="property">class </em><code class="sig-prename descclassname">asteroid.engine.system.</code><code class="sig-name descname">System</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">optimizer</em>, <em class="sig-param">loss_func</em>, <em class="sig-param">train_loader</em>, <em class="sig-param">val_loader=None</em>, <em class="sig-param">scheduler=None</em>, <em class="sig-param">config=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://pytorch-lightning.readthedocs.io/en/latest/pytorch_lightning.core.lightning.html#pytorch_lightning.core.lightning.LightningModule" title="(in PyTorch-Lightning v0.7.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">pytorch_lightning.core.lightning.LightningModule</span></code></a></p>
+<p>Base class for deep learning systems.
+Contains a model, an optimizer, a loss function, training and validation
+dataloaders and learning rate scheduler.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model</strong> (<a class="reference external" href="https://pytorch.org/docs/master/nn.html#torch.nn.Module" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><em>torch.nn.Module</em></a>) – Instance of model.</p></li>
+<li><p><strong>optimizer</strong> (<a class="reference external" href="https://pytorch.org/docs/master/optim.html#torch.optim.Optimizer" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><em>torch.optim.Optimizer</em></a>) – Instance or list of optimizers.</p></li>
+<li><p><strong>loss_func</strong> (<em>callable</em>) – Loss function with signature
+(est_targets, targets).</p></li>
+<li><p><strong>train_loader</strong> (<a class="reference external" href="https://pytorch.org/docs/master/data.html#torch.utils.data.DataLoader" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><em>torch.utils.data.DataLoader</em></a>) – Training dataloader.</p></li>
+<li><p><strong>val_loader</strong> (<a class="reference external" href="https://pytorch.org/docs/master/data.html#torch.utils.data.DataLoader" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><em>torch.utils.data.DataLoader</em></a>) – Validation dataloader.</p></li>
+<li><p><strong>scheduler</strong> (<em>torch.optim.lr_scheduler._LRScheduler</em>) – Instance, or list
+of learning rate schedulers.</p></li>
+<li><p><strong>config</strong> – Anything to be saved with the checkpoints during training.
+The config dictionary to re-instantiate the run for example.</p></li>
+</ul>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, <cite>training_step</cite> (used by <cite>pytorch-lightning</cite> in the
+training loop) and <cite>validation_step</cite> (used for the validation loop)
+share <cite>common_step</cite>. If you want different behavior for the training
+loop and the validation loop, overwrite both <cite>training_step</cite> and
+<cite>validation_step</cite> instead.</p>
+</div>
+<dl class="method">
+<dt id="asteroid.engine.system.System.common_step">
+<code class="sig-name descname">common_step</code><span class="sig-paren">(</span><em class="sig-param">batch</em>, <em class="sig-param">batch_nb</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.common_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.common_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Common forward step between training and validation.</p>
+<p>The function of this method is to unpack the data given by the loader,
+forward the batch through the model and compute the loss.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch</strong> – the object returned by the loader (a list of torch.Tensor
+in most cases) but can be something else.</p></li>
+<li><p><strong>batch_nb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – The number of the batch in the epoch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference external" href="https://pytorch.org/docs/master/tensors.html#torch.Tensor" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a> – The loss value on this batch.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is typically the method to overwrite when subclassing
+<cite>System</cite>. If the training and validation steps are different
+(except for loss.backward() and optimzer.step()), then overwrite
+<cite>training_step</cite> and <cite>validation_step</cite> instead.</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.configure_optimizers">
+<code class="sig-name descname">configure_optimizers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.configure_optimizers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.configure_optimizers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required by pytorch-lightning.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.forward">
+<code class="sig-name descname">forward</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.forward" title="Permalink to this definition">¶</a></dt>
+<dd><p>Applies forward pass of the model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://pytorch.org/docs/master/tensors.html#torch.Tensor" title="(in PyTorch vmaster (1.5.0a0+08bc3c6 ))"><code class="xref py py-class docutils literal notranslate"><span class="pre">torch.Tensor</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.none_to_string">
+<em class="property">static </em><code class="sig-name descname">none_to_string</code><span class="sig-paren">(</span><em class="sig-param">dic</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.none_to_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.none_to_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Converts <cite>None</cite> to  <code class="docutils literal notranslate"><span class="pre">'None'</span></code> to be handled by torch summary writer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dic</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><em>dict</em></a>) – Dictionary to be transformed.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>dict</em> – Transformed dictionary.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.on_batch_end">
+<code class="sig-name descname">on_batch_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.on_batch_end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.on_batch_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite if needed. Called by pytorch-lightning</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.on_batch_start">
+<code class="sig-name descname">on_batch_start</code><span class="sig-paren">(</span><em class="sig-param">batch</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.on_batch_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.on_batch_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite if needed. Called by pytorch-lightning</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.on_epoch_end">
+<code class="sig-name descname">on_epoch_end</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.on_epoch_end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.on_epoch_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite if needed. Called by pytorch-lightning</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.on_epoch_start">
+<code class="sig-name descname">on_epoch_start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.on_epoch_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.on_epoch_start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite if needed. Called by pytorch-lightning</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.on_save_checkpoint">
+<code class="sig-name descname">on_save_checkpoint</code><span class="sig-paren">(</span><em class="sig-param">checkpoint</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.on_save_checkpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.on_save_checkpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Overwrite if you want to save more things in the checkpoint.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.tng_dataloader">
+<code class="sig-name descname">tng_dataloader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asteroid.engine.system.System.tng_dataloader" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.train_dataloader">
+<code class="sig-name descname">train_dataloader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asteroid.engine.system.System.train_dataloader" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.training_step">
+<code class="sig-name descname">training_step</code><span class="sig-paren">(</span><em class="sig-param">batch</em>, <em class="sig-param">batch_nb</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.training_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.training_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass data through the model and compute the loss.</p>
+<p>Backprop is <strong>not</strong> performed (meaning PL will do it for you).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch</strong> – the object returned by the loader (a list of torch.Tensor
+in most cases) but can be something else.</p></li>
+<li><p><strong>batch_nb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – The number of the batch in the epoch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><em>dict</em> – <code class="docutils literal notranslate"><span class="pre">'loss'</span></code>: loss</p>
+<p><code class="docutils literal notranslate"><span class="pre">'log'</span></code>: dict with tensorboard logs</p>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.unsqueeze_if_dp_or_ddp">
+<code class="sig-name descname">unsqueeze_if_dp_or_ddp</code><span class="sig-paren">(</span><em class="sig-param">*values</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.unsqueeze_if_dp_or_ddp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.unsqueeze_if_dp_or_ddp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply unsqueeze(0) to all values if training is done with dp
+or ddp. Unused now.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.val_dataloader">
+<code class="sig-name descname">val_dataloader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#asteroid.engine.system.System.val_dataloader" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.validation_end">
+<code class="sig-name descname">validation_end</code><span class="sig-paren">(</span><em class="sig-param">outputs</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.validation_end"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.validation_end" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to aggregate outputs of <cite>validation_step</cite> for logging.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outputs</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.8)"><em>dict</em></a><em>]</em>) – List of validation losses, each with a</p></li>
+<li><p><strong>key</strong> (<em>'val_loss'</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><p><em>dict</em> – Average loss</p>
+<p><code class="docutils literal notranslate"><span class="pre">'val_loss'</span></code>: Average loss on <cite>outputs</cite></p>
+<p><code class="docutils literal notranslate"><span class="pre">'log'</span></code>: Tensorboard logs</p>
+<p><code class="docutils literal notranslate"><span class="pre">'progress_bar'</span></code>: Tensorboard logs</p>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.engine.system.System.validation_step">
+<code class="sig-name descname">validation_step</code><span class="sig-paren">(</span><em class="sig-param">batch</em>, <em class="sig-param">batch_nb</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/engine/system.html#System.validation_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.engine.system.System.validation_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Need to overwrite PL validation_step to do validation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>batch</strong> – the object returned by the loader (a list of torch.Tensor
+in most cases) but can be something else.</p></li>
+<li><p><strong>batch_nb</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a>) – The number of the batch in the epoch.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><em>dict</em> – <code class="docutils literal notranslate"><span class="pre">'val_loss'</span></code>: loss</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="asteroid.engine.system.System._abc_cache">
+<code class="sig-name descname">_abc_cache</code><em class="property"> = &lt;_weakrefset.WeakSet object&gt;</em><a class="headerlink" href="#asteroid.engine.system.System._abc_cache" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="asteroid.engine.system.System._abc_negative_cache">
+<code class="sig-name descname">_abc_negative_cache</code><em class="property"> = &lt;_weakrefset.WeakSet object&gt;</em><a class="headerlink" href="#asteroid.engine.system.System._abc_negative_cache" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="asteroid.engine.system.System._abc_negative_cache_version">
+<code class="sig-name descname">_abc_negative_cache_version</code><em class="property"> = 50</em><a class="headerlink" href="#asteroid.engine.system.System._abc_negative_cache_version" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="asteroid.engine.system.System._abc_registry">
+<code class="sig-name descname">_abc_registry</code><em class="property"> = &lt;_weakrefset.WeakSet object&gt;</em><a class="headerlink" href="#asteroid.engine.system.System._abc_registry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

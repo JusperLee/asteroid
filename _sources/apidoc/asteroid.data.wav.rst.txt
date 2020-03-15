@@ -1,0 +1,8 @@
+asteroid.data.wav module
+========================
+
+.. automodule:: asteroid.data.wav
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

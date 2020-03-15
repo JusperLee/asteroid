@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>asteroid.data.wav module &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroidapidoc/asteroid.data.wav.html"/>
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="../_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>asteroid.data.wav module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/apidoc/asteroid.data.wav.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="module-asteroid.data.wav">
+<span id="asteroid-data-wav-module"></span><h1>asteroid.data.wav module<a class="headerlink" href="#module-asteroid.data.wav" title="Permalink to this headline">¶</a></h1>
+<p>Utils to handle wav files</p>
+<dl class="class">
+<dt id="asteroid.data.wav.MultipleWav">
+<em class="property">class </em><code class="sig-prename descclassname">asteroid.data.wav.</code><code class="sig-name descname">MultipleWav</code><span class="sig-paren">(</span><em class="sig-param">file_name_list</em>, <em class="sig-param">channel_interest=None</em>, <em class="sig-param">wav_id=None</em>, <em class="sig-param">save=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#MultipleWav"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.MultipleWav" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#asteroid.data.wav.SingleWav" title="asteroid.data.wav.SingleWav"><code class="xref py py-class docutils literal notranslate"><span class="pre">asteroid.data.wav.SingleWav</span></code></a></p>
+<p>Handle a set of wav files as a single object.
+:param file_name_list: List of wav file names
+:type file_name_list: list[str]
+:param channel_interest: An array of interested channels.</p>
+<blockquote>
+<div><p>Used in case of multichannel signals</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wav_id</strong> – An id to identify the bunch of wav file</p></li>
+<li><p><strong>save</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – Save the data until the object is destroyed if True</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="asteroid.data.wav.MultipleWav.update_info">
+<code class="sig-name descname">update_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#MultipleWav.update_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.MultipleWav.update_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get wav related info and place it in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Avoid calling this in the <cite>__init__</cite> section. Very time
+consuming</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.MultipleWav.data">
+<em class="property">property </em><code class="sig-name descname">data</code><a class="headerlink" href="#asteroid.data.wav.MultipleWav.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads all the files in the file list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list[<a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>] –     A list of wav signals</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="asteroid.data.wav.SingleWav">
+<em class="property">class </em><code class="sig-prename descclassname">asteroid.data.wav.</code><code class="sig-name descname">SingleWav</code><span class="sig-paren">(</span><em class="sig-param">file_name</em>, <em class="sig-param">channel_interest=None</em>, <em class="sig-param">wav_id=None</em>, <em class="sig-param">save=False</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Interface to handle a single wav file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><em>str</em></a>) – The path to the wav file</p></li>
+<li><p><strong>channel_interest</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><em>int</em></a><em>]</em>) – An array of interested channels.
+Used in case of multichannel signals</p></li>
+<li><p><strong>wav_id</strong> – An id to identify the wav file</p></li>
+<li><p><strong>save</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.8)"><em>bool</em></a>) – Save the data untill the object is destroyed if True</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">SingleWav</span><span class="p">(</span><span class="s1">&#39;/home/test.wav&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.__enter__">
+<code class="sig-name descname">__enter__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.__enter__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.__enter__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Using <cite>with</cite> operator for wav object
+.. rubric:: Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">asteroid.data.wav</span> <span class="kn">import</span> <span class="n">SingleWav</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">asteroid.filterbanks</span> <span class="kn">import</span> <span class="n">Encoder</span><span class="p">,</span> <span class="n">STFTFB</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wav_obj</span> <span class="o">=</span> <span class="n">SingleWav</span><span class="p">(</span><span class="s1">&#39;file.wav&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">fb</span> <span class="o">=</span> <span class="n">Encoder</span><span class="p">(</span><span class="n">STFTFB</span><span class="p">(</span><span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">set_trace</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">with</span> <span class="n">wav_obj</span><span class="p">:</span> <span class="c1"># Wav file is read</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="nb">print</span><span class="p">(</span><span class="n">wav_obj</span><span class="o">.</span><span class="n">_SingleWav__wav_data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">wav_obj</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+<span class="go">            dtype=torch.float32).T.unsqueeze(1)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">data_stft</span> <span class="o">=</span> <span class="n">fb</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="go">## Picks wav data from memory and not from file</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">new_data</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">wav_obj</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span>
+<span class="go">            dtype=torch.float32).T.unsqueeze(0).unsqueeze(0)</span>
+<span class="gp">&gt;&gt;&gt; </span>    <span class="n">new_data_stft</span> <span class="o">=</span> <span class="n">fb</span><span class="p">(</span><span class="n">new_data</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Wav data cleared from memory</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">wav_obj</span><span class="o">.</span><span class="n">_SingleWav__wav_data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.__exit__">
+<code class="sig-name descname">__exit__</code><span class="sig-paren">(</span><em class="sig-param">data_type</em>, <em class="sig-param">data_val</em>, <em class="sig-param">data_tb</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.__exit__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.__exit__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear wav data is save not requested</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.part_data">
+<code class="sig-name descname">part_data</code><span class="sig-paren">(</span><em class="sig-param">start</em>, <em class="sig-param">end</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.part_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.part_data" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><p>Read part of the wav file</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>start</strong> – int, start of the wav file (in samples)</p></li>
+<li><p><strong>end</strong> – int, end of the wav file in samples</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns</dt><dd><p>A two dimensional numpy array of shape [samples, channels]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.random_part_data">
+<code class="sig-name descname">random_part_data</code><span class="sig-paren">(</span><em class="sig-param">duration=-1</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.random_part_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.random_part_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return random part of the wav file
+:param duration: float. required duration in seconds.</p>
+<blockquote>
+<div><p>defaults to -1 in which case returns the full signal</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A two dimensional numpy array of shape [samples, channels]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.save_space">
+<code class="sig-name descname">save_space</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.save_space"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.save_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove the saved data. self.data will read from the file again.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.temp_save">
+<code class="sig-name descname">temp_save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.temp_save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.temp_save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporarily save the wav data.</p>
+<p>Call <a class="reference internal" href="#asteroid.data.wav.SingleWav.save_space" title="asteroid.data.wav.SingleWav.save_space"><code class="xref py py-func docutils literal notranslate"><span class="pre">save_space()</span></code></a> to remove it.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.update_info">
+<code class="sig-name descname">update_info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.update_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.update_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get wav related info and place it in the <code class="xref py py-attr docutils literal notranslate"><span class="pre">info</span></code> variable.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Avoid calling this in the <cite>__init__</cite> section. Very time
+consuming</p>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.verify">
+<code class="sig-name descname">verify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.verify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.verify" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify if all the information is good</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.write_wav">
+<code class="sig-name descname">write_wav</code><span class="sig-paren">(</span><em class="sig-param">path</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/asteroid/data/wav.html#SingleWav.write_wav"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#asteroid.data.wav.SingleWav.write_wav" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the wav data into an other path</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.data">
+<em class="property">property </em><code class="sig-name descname">data</code><a class="headerlink" href="#asteroid.data.wav.SingleWav.data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the wav file if not saved</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a> –      Two dimensional array of shape [samples, channels]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.wav_id">
+<em class="property">property </em><code class="sig-name descname">wav_id</code><a class="headerlink" href="#asteroid.data.wav.SingleWav.wav_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get wav id</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="asteroid.data.wav.SingleWav.wav_len">
+<em class="property">property </em><code class="sig-name descname">wav_len</code><a class="headerlink" href="#asteroid.data.wav.SingleWav.wav_len" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the sample length of the signal</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><em>int</em> – Wav length in number of samples</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

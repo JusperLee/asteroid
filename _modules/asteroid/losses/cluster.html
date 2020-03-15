@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>asteroid.losses.cluster &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroid_modules/asteroid/losses/cluster.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="../../../_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>asteroid.losses.cluster</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for asteroid.losses.cluster</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">torch</span>
+
+<div class="viewcode-block" id="batch_matrix_norm"><a class="viewcode-back" href="../../../apidoc/asteroid.losses.cluster.html#asteroid.losses.cluster.batch_matrix_norm">[docs]</a><span class="k">def</span> <span class="nf">batch_matrix_norm</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">norm_order</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; normalization of the matrix</span>
+<span class="sd">    Args:</span>
+<span class="sd">        matrix: torch.Tensor. Expected shape [batch, *]</span>
+<span class="sd">        norm_order: int. Order of normalization. </span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        normed matrix: torch.Tensor. </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">torch</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">p</span><span class="o">=</span><span class="n">norm_order</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span></div>
+
+<div class="viewcode-block" id="deep_clustering_loss"><a class="viewcode-back" href="../../../apidoc/asteroid.losses.cluster.html#asteroid.losses.cluster.deep_clustering_loss">[docs]</a><span class="k">def</span> <span class="nf">deep_clustering_loss</span><span class="p">(</span><span class="n">embedding</span><span class="p">,</span> <span class="n">tgt_index</span><span class="p">,</span> <span class="n">spk_cnt</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Compute the deep clustering loss defined in  </span>
+<span class="sd">    Args:</span>
+<span class="sd">        embedding: torch.Tensor. Expected shape  [batch, frame x frequency, embeddingDim]</span>
+<span class="sd">        tgt_index: torch.LongTensor. Dominating source in each time frequency bin. Expected shape:</span>
+<span class="sd">            [batch, frequency, frame]</span>
+<span class="sd">        spk_cnt: int. Number of speakers. Estimated from tgt_index if not given.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">         `torch.Tensor`. Deep clustering loss for every sample</span>
+
+<span class="sd">    Examples:</span>
+
+<span class="sd">        &gt;&gt;&gt; import torch</span>
+<span class="sd">        &gt;&gt;&gt; from asteroid.losses.cluster import deep_clustering_loss</span>
+<span class="sd">        &gt;&gt;&gt; spk_cnt = 3</span>
+<span class="sd">        &gt;&gt;&gt; embedding = torch.randn(10, 5*400, 20)</span>
+<span class="sd">        &gt;&gt;&gt; targets = torch.LongTensor(10, 400, 5).random_(0, spk_cnt)</span>
+<span class="sd">        &gt;&gt;&gt; loss = deep_clustering_loss(embedding, targets, spk_cnt)</span>
+<span class="sd">        &gt;&gt;&gt; print(loss.size)</span>
+<span class="sd">        torch.size([10])</span>
+
+<span class="sd">    Reference:</span>
+<span class="sd">            Zhong-Qiu Wang, Jonathan Le Roux, John R. Hershey </span>
+<span class="sd">            &quot;ALTERNATIVE OBJECTIVE FUNCTIONS FOR DEEP CLUSTERING&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">spk_cnt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">spk_cnt</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tgt_index</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+
+    <span class="n">batch</span><span class="p">,</span> <span class="n">bins</span><span class="p">,</span> <span class="n">frame</span> <span class="o">=</span> <span class="n">tgt_index</span><span class="o">.</span><span class="n">shape</span>
+    <span class="n">tgt_embedding</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">frame</span><span class="o">*</span><span class="n">bins</span><span class="p">,</span> <span class="n">spk_cnt</span><span class="p">)</span>
+    <span class="n">tgt_embedding</span><span class="o">.</span><span class="n">scatter_</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">tgt_index</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">batch</span><span class="p">,</span> <span class="n">frame</span><span class="o">*</span><span class="n">bins</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">est_proj</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;ijk,ijl-&gt;ikl&#39;</span><span class="p">,</span> <span class="n">embedding</span><span class="p">,</span> <span class="n">embedding</span><span class="p">)</span>
+    <span class="n">true_proj</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;ijk,ijl-&gt;ikl&#39;</span><span class="p">,</span> <span class="n">tgt_embedding</span><span class="p">,</span> <span class="n">tgt_embedding</span><span class="p">)</span>
+    <span class="n">true_est_proj</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;ijk,ijl-&gt;ikl&#39;</span><span class="p">,</span> <span class="n">embedding</span><span class="p">,</span> <span class="n">tgt_embedding</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">batch_matrix_norm</span><span class="p">(</span><span class="n">est_proj</span><span class="p">)</span> <span class="o">+</span> <span class="n">batch_matrix_norm</span><span class="p">(</span><span class="n">true_proj</span><span class="p">)</span> <span class="o">-</span> \
+            <span class="mi">2</span><span class="o">*</span><span class="n">batch_matrix_norm</span><span class="p">(</span><span class="n">true_est_proj</span><span class="p">)</span></div>
+
+
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

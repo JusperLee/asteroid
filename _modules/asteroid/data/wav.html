@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>asteroid.data.wav &mdash; asteroid 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://github.com/mpariente/asteroid_modules/asteroid/data/wav.html"/>
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> asteroid
+          
+
+          
+            
+            <img src="../../../_static/asteroid_logo.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Why Asteroid ?</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../why_use_asteroid.html">Why use Asteroid ?</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Python API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../filterbanks.html">Filterbank API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../filterbanks.html#filterbank-encoder-and-decoder">Filterbank, Encoder and Decoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../filterbanks.html#learnable-filterbanks">Learnable filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../filterbanks.html#module-asteroid.filterbanks.free_fb"><span class="hidden-section">Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../filterbanks.html#analytic-free"><span class="hidden-section">Analytic Free</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../filterbanks.html#parameterized-sinc"><span class="hidden-section">Parameterized Sinc</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../filterbanks.html#fixed-filterbanks">Fixed filterbanks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../filterbanks.html#module-asteroid.filterbanks.stft_fb"><span class="hidden-section">STFT</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../losses.html">Losses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../losses.html#module-asteroid.losses.pit_wrapper">Permutation invariant (PIT) training made easy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../losses.html#available-loss-functions">Available loss functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../losses.html#sdr"><span class="hidden-section">SDR</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../losses.html#mse"><span class="hidden-section">MSE</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../masknn.html">DNN building blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../masknn.html#mask-estimators">Mask estimators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../masknn.html#ready-to-use"><span class="hidden-section">Ready-to-use</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../masknn.html#layers"><span class="hidden-section">Layers</span></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../masknn.html#normalization-layers">Normalization layers</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Datasets and Recipes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../supported_datasets.html">List of supported datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../running_a_recipe.html">Running a recipe</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Extending asteroid</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing_a_new_loss.html">Writing a new loss</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../writing_a_new_filterbank.html">Writing a new filterbank</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">asteroid</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>asteroid.data.wav</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for asteroid.data.wav</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot; Utils to handle wav files</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">soundfile</span> <span class="k">as</span> <span class="nn">sf</span>
+
+
+<div class="viewcode-block" id="SingleWav"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav">[docs]</a><span class="k">class</span> <span class="nc">SingleWav</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Interface to handle a single wav file</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        file_name (str): The path to the wav file</span>
+<span class="sd">        channel_interest (list[int]): An array of interested channels.</span>
+<span class="sd">            Used in case of multichannel signals</span>
+<span class="sd">        wav_id: An id to identify the wav file</span>
+<span class="sd">        save (bool): Save the data untill the object is destroyed if True</span>
+
+<span class="sd">    Examples:</span>
+<span class="sd">        &gt;&gt;&gt; SingleWav(&#39;/home/test.wav&#39;)</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name</span><span class="p">,</span> <span class="n">channel_interest</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wav_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">save</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_name</span> <span class="o">=</span> <span class="n">file_name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id</span> <span class="o">=</span> <span class="n">wav_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_len</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel_count</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">save</span> <span class="o">=</span> <span class="n">save</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verify</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">channel_interest</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">channel_interest</span><span class="p">)</span>
+
+<div class="viewcode-block" id="SingleWav.verify"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.verify">[docs]</a>    <span class="k">def</span> <span class="nf">verify</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Verify if all the information is good &quot;&quot;&quot;</span>
+        <span class="k">assert</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">),</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span> <span class="o">+</span>
+                                                <span class="s1">&#39; does not exists&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SingleWav.update_info"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.update_info">[docs]</a>    <span class="k">def</span> <span class="nf">update_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Get wav related info and place it in the :attr:`info` variable.</span>
+
+<span class="sd">        .. note:: Avoid calling this in the `__init__` section. Very time</span>
+<span class="sd">            consuming</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">samplerate</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sample_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">samplerate</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">duration</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">channel_count</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">channels</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">wav_len</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Get the sample length of the signal</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            int: Wav length in number of samples</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_len</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">update_info</span><span class="p">()</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_len</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Read the wav file if not saved</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">           :class:`numpy.ndarray`:</span>
+<span class="sd">                Two dimensional array of shape [samples, channels]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_info</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span>
+        <span class="n">wav_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span> <span class="n">always_2d</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">wav_data</span> <span class="o">=</span> <span class="n">wav_data</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span><span class="p">]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="o">=</span> <span class="n">wav_data</span>
+        <span class="k">return</span> <span class="n">wav_data</span>
+
+<div class="viewcode-block" id="SingleWav.random_part_data"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.random_part_data">[docs]</a>    <span class="k">def</span> <span class="nf">random_part_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">duration</span><span class="o">=-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Return random part of the wav file</span>
+<span class="sd">            Args:</span>
+<span class="sd">                duration: float. required duration in seconds.</span>
+<span class="sd">                    defaults to -1 in which case returns the full signal</span>
+
+<span class="sd">            Returns:</span>
+<span class="sd">                A two dimensional numpy array of shape [samples, channels]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">duration</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_info</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">duration</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">duration</span><span class="p">,</span>\
+                <span class="s1">&#39;Requested duration exceeds signal length&#39;</span>
+        <span class="n">max_sample</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">info</span><span class="o">.</span><span class="n">duration</span> <span class="o">-</span> <span class="n">duration</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span><span class="p">)</span>
+        <span class="n">start_sample</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">max_sample</span><span class="p">)</span>
+        <span class="n">end_sample</span> <span class="o">=</span> <span class="n">start_sample</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">duration</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">part_data</span><span class="p">(</span><span class="n">start_sample</span><span class="p">,</span> <span class="n">end_sample</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="SingleWav.part_data"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.part_data">[docs]</a>    <span class="k">def</span> <span class="nf">part_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">            Read part of the wav file</span>
+<span class="sd">        Args:</span>
+<span class="sd">            start: int, start of the wav file (in samples)</span>
+<span class="sd">            end: int, end of the wav file in samples</span>
+<span class="sd">        Returns</span>
+<span class="sd">            A two dimensional numpy array of shape [samples, channels]</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_info</span><span class="p">()</span>
+        <span class="k">assert</span> <span class="n">end</span> <span class="o">&gt;</span> <span class="n">start</span><span class="p">,</span> <span class="s1">&#39;End should be greater than start&#39;</span>
+        <span class="k">assert</span> <span class="n">end</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sample_len</span><span class="p">,</span>\
+                <span class="s1">&#39;Requested length is greater than max available&#39;</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">wav_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span> <span class="o">=</span> \
+                    <span class="n">sf</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">file_name</span><span class="p">,</span> <span class="n">always_2d</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
+                            <span class="n">start</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">wav_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">end</span><span class="p">,</span> <span class="p">:]</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">wav_data</span> <span class="o">=</span> <span class="n">wav_data</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">wav_data</span></div>
+
+<div class="viewcode-block" id="SingleWav.__enter__"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.__enter__">[docs]</a>    <span class="k">def</span> <span class="fm">__enter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Using `with` operator for wav object</span>
+<span class="sd">        Examples:</span>
+<span class="sd">            &gt;&gt;&gt; from asteroid.data.wav import SingleWav</span>
+<span class="sd">            &gt;&gt;&gt; from asteroid.filterbanks import Encoder, STFTFB</span>
+<span class="sd">            &gt;&gt;&gt; wav_obj = SingleWav(&#39;file.wav&#39;)</span>
+<span class="sd">            &gt;&gt;&gt; fb = Encoder(STFTFB(512, 512))</span>
+<span class="sd">            &gt;&gt;&gt; set_trace()</span>
+<span class="sd">            &gt;&gt;&gt; with wav_obj: # Wav file is read</span>
+<span class="sd">            &gt;&gt;&gt;     print(wav_obj._SingleWav__wav_data is None)</span>
+<span class="sd">            False</span>
+<span class="sd">            &gt;&gt;&gt;     data = torch.tensor(wav_obj.data,</span>
+<span class="sd">                        dtype=torch.float32).T.unsqueeze(1)</span>
+<span class="sd">            &gt;&gt;&gt;     data_stft = fb(data)</span>
+<span class="sd">            ## Picks wav data from memory and not from file</span>
+<span class="sd">            &gt;&gt;&gt;     new_data = torch.tensor(wav_obj.data.sum(1),</span>
+<span class="sd">                        dtype=torch.float32).T.unsqueeze(0).unsqueeze(0)</span>
+<span class="sd">            &gt;&gt;&gt;     new_data_stft = fb(new_data)</span>
+<span class="sd">            &gt;&gt;&gt; # Wav data cleared from memory</span>
+<span class="sd">            &gt;&gt;&gt; print(wav_obj._SingleWav__wav_data is None)</span>
+<span class="sd">            True</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">temp_save</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SingleWav.__exit__"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.__exit__">[docs]</a>    <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data_type</span><span class="p">,</span> <span class="n">data_val</span><span class="p">,</span> <span class="n">data_tb</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Clear wav data is save not requested</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">save_space</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="SingleWav.save_space"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.save_space">[docs]</a>    <span class="k">def</span> <span class="nf">save_space</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Remove the saved data. self.data will read from the file again.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="o">=</span> <span class="kc">None</span></div>
+
+<div class="viewcode-block" id="SingleWav.temp_save"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.temp_save">[docs]</a>    <span class="k">def</span> <span class="nf">temp_save</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Temporarily save the wav data.</span>
+
+<span class="sd">        Call :func:`save_space` to remove it.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">wav_id</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Get wav id &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__id</span>
+
+    <span class="nd">@wav_id</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">wav_id</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id</span> <span class="o">=</span> <span class="n">value</span>
+
+<div class="viewcode-block" id="SingleWav.write_wav"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.SingleWav.write_wav">[docs]</a>    <span class="k">def</span> <span class="nf">write_wav</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Write the wav data into an other path &quot;&quot;&quot;</span>
+        <span class="n">sf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="MultipleWav"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.MultipleWav">[docs]</a><span class="k">class</span> <span class="nc">MultipleWav</span><span class="p">(</span><span class="n">SingleWav</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Handle a set of wav files as a single object.</span>
+<span class="sd">    Args:</span>
+<span class="sd">        file_name_list (list[str]): List of wav file names</span>
+<span class="sd">        channel_interest (list[int]): An array of interested channels.</span>
+<span class="sd">            Used in case of multichannel signals</span>
+<span class="sd">        wav_id: An id to identify the bunch of wav file</span>
+<span class="sd">        save (bool): Save the data until the object is destroyed if True</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">file_name_list</span><span class="p">,</span> <span class="n">channel_interest</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">wav_id</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">save</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">file_name_list</span> <span class="o">=</span> <span class="n">file_name_list</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__id</span> <span class="o">=</span> <span class="n">wav_id</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_len</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel_count</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">info_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sample_len_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel_count_list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">save</span> <span class="o">=</span> <span class="n">save</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="k">if</span> <span class="n">channel_interest</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">channel_interest</span><span class="p">)</span>
+
+<div class="viewcode-block" id="MultipleWav.update_info"><a class="viewcode-back" href="../../../apidoc/asteroid.data.wav.html#asteroid.data.wav.MultipleWav.update_info">[docs]</a>    <span class="k">def</span> <span class="nf">update_info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">info</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">_file_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name_list</span><span class="p">:</span>
+                <span class="n">info</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">_file_</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">info_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">samplerate</span><span class="p">)</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">sample_len_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span>
+                    <span class="nb">int</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">samplerate</span> <span class="o">*</span> <span class="n">info</span><span class="o">.</span><span class="n">duration</span><span class="p">))</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">channel_count_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">channels</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">info</span> <span class="o">=</span> <span class="n">info</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sampling_rate</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">samplerate</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">sample_len</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">samplerate</span> <span class="o">*</span> <span class="n">info</span><span class="o">.</span><span class="n">duration</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">channel_count</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">channels</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; Reads all the files in the file list</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            list[:class:`numpy.ndarray`]:</span>
+<span class="sd">                A list of wav signals</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">update_info</span><span class="p">()</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span>
+        <span class="n">wav_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">_file_</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">file_name_list</span><span class="p">:</span>
+            <span class="n">_wav_data</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">sf</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">_file_</span><span class="p">,</span> <span class="n">always_2d</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="n">_wav_data</span> <span class="o">=</span> <span class="n">_wav_data</span><span class="p">[:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">channel_interest</span><span class="p">]</span>
+            <span class="n">wav_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">_wav_data</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">save</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">__wav_data</span> <span class="o">=</span> <span class="n">wav_data</span>
+        <span class="k">return</span> <span class="n">wav_data</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Oncoming
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
